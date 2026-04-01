@@ -1,0 +1,347 @@
+/* --- FUNDAMENT I TŁO --- */
+body {
+  margin: 0;
+  padding: 0;
+  background: 
+    radial-gradient(circle at 50% -20%, rgba(34, 197, 94, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at top center, #1a1a1a 0%, #09090b 100%);
+  background-attachment: fixed;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Fix dla brakującej kropki przy klasie */
+.text-green { color: #22c55e; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Poprawka dla kotwic (odstęp od góry) */
+#features, #faq, #status {
+  scroll-margin-top: 100px;
+}
+
+/* --- NAWIGACJA --- */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(9, 9, 11, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #27272a;
+  z-index: 1000;
+}
+
+.navbar-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+/* Centrowanie linków na dużych ekranach */
+@media (min-width: 769px) {
+  .nav-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.nav-links a {
+  color: #a1a1aa;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #22c55e;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.nav-actions {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 160px; /* Rezerwuje miejsce, żeby linki na środku nie skakały */
+}
+
+.btn-discord {
+  background-color: rgba(88, 101, 242, 0.1); /* Delikatny kolor Discorda */
+  color: #5865f2;
+  border: 1px solid rgba(88, 101, 242, 0.4);
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-discord:hover {
+  background-color: #5865f2;
+  color: white;
+  box-shadow: 0 0 15px rgba(88, 101, 242, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Responsywność - na małych ekranach ukrywamy przycisk, żeby nie zasłonił loga */
+@media (max-width: 768px) {
+  .nav-actions {
+    display: none;
+  }
+}
+
+/* --- HERO SECTION --- */
+.hero-container {
+  text-align: center;
+  padding: 8rem 2rem 4rem 2rem;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.05) 0%, transparent 70%);
+}
+
+.badge {
+  background-color: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  padding: 6px 12px;
+  border-radius: 99px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 20px;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  margin-top: 0;
+  margin-bottom: 20px;
+  background: linear-gradient(to bottom, #fff 0%, #a1a1aa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.subtitle {
+  color: #a1a1aa;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  line-height: 1.5;
+}
+
+/* --- PRZYCISKI --- */
+.button-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn-primary {
+  background-color: transparent;
+  color: #22c55e;
+  border: 2px solid #22c55e;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: glow-pulse 3s infinite;
+}
+
+@keyframes glow-pulse {
+  0% { box-shadow: 0 0 5px rgba(34, 197, 94, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.4); }
+  100% { box-shadow: 0 0 5px rgba(34, 197, 94, 0.2); }
+}
+
+.btn-primary:hover {
+  background-color: #22c55e;
+  color: #09090b;
+  box-shadow: 0 0 30px rgba(34, 197, 94, 0.6);
+  animation: none;
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #27272a;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-ghost:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: #3f3f46;
+}
+
+/* --- KAFFELKI --- */
+.features-grid {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background-color: rgba(24, 24, 27, 0.4);
+  border: 1px solid #27272a;
+  padding: 30px;
+  border-radius: 16px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: #3f3f46;
+}
+
+/* --- STATYSTYKI --- */
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding: 60px 20px;
+  background-color: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid #27272a;
+  border-bottom: 1px solid #27272a;
+  margin-top: 40px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h4 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #22c55e;
+  margin: 0;
+}
+
+/* --- FAQ --- */
+.faq-section {
+  max-width: 900px;
+  margin: 100px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  text-align: left;
+}
+
+.faq-item {
+  background: rgba(24, 24, 27, 0.6);
+  border: 1px solid #27272a;
+  padding: 25px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.faq-item:hover {
+  border-color: #22c55e;
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.1);
+}
+
+/* --- STATUS PANEL --- */
+.status-panel {
+  max-width: 800px;
+  margin: 60px auto 100px auto;
+  background: #000;
+  border: 1px solid #27272a;
+  border-radius: 8px;
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #22c55e;
+  animation: pulse-green 1.5s infinite;
+}
+
+@keyframes pulse-green {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* --- STOPKA - NOWY STYL --- */
+.footer {
+  padding: 40px 20px;
+  background-color: #09090b;
+  border-top: 1px solid #18181b;
+  text-align: center; /* Środkujemy wszystko dla minimalizmu */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* Napisy jeden pod drugim */
+  gap: 10px;
+  color: #71717a;
+  font-size: 0.85rem;
+}
+
+.disclaimer {
+  opacity: 0.5;
+  font-size: 0.75rem;
+}
+
+/* Na większych ekranach mogą być w jednej linii, jeśli wolisz */
+@media (min-width: 769px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* --- RESPONSYWNOŚĆ --- */
+@media (max-width: 768px) {
+  .nav-links, .nav-spacer { display: none; }
+  .title { font-size: 2.5rem; }
+  .stats-container { flex-direction: column; gap: 40px; }
+  .faq-grid { grid-template-columns: 1fr; }
+  .footer-content { flex-direction: column; gap: 20px; text-align: center; }
+}

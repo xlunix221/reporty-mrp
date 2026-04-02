@@ -30,7 +30,7 @@ function App() {
 
       {/* SEKCJA 1: HERO */}
       <div className="hero-container">
-        <div className="badge">NASTĘPNA AKTUALIZACJA: Kartoteka 🚀</div>
+        <div className="badge">Ostatnia Aktualizacja: Kartoteka 🚀</div>
         <h1 className="title">Wszystkie skargi pod ręką!</h1>
         <p className="subtitle">
           System monitorowania forum MajesticRP. Otrzymuj powiadomienia o skargach bezpośrednio w wiadomościach na Discordzie.
@@ -68,7 +68,7 @@ function App() {
         <div className="feature-card">
           <div className="feature-icon">📊</div>
           <h3>Pełna Historia</h3>
-          <p>Przeglądaj wszystkie swoje przeszłe skargi w jednym, przejrzystym panelu użytkownika. (SOON)</p>
+          <p>Przeglądaj wszystkie swoje przeszłe skargi w jednym, przejrzystym panelu użytkownika.</p>
         </div>
       </div>
 

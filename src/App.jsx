@@ -21,7 +21,7 @@ function App() {
 
     {/* ZAMIAST SPACERA - PRZYCISK DISCORDA */}
     <div className="nav-actions">
-      <a href="discord.com/b53KrZXm" target="_blank" rel="noreferrer" className="btn-discord">
+      <a href="https://discord.gg/TubwP3RQXa" target="_blank" rel="noreferrer" className="btn-discord">
         Dołącz do Discorda
       </a>
     </div>

@@ -33,7 +33,7 @@ function App() {
         <div className="badge">Ostatnia Aktualizacja: Kartoteka 🚀</div>
         <h1 className="title">Wszystkie skargi pod ręką!</h1>
         <p className="subtitle">
-          System monitorowania forum MajesticRP.  Otrzymuj powiadomienia o skargach bezpośrednio w wiadomościach na Discordzie.
+          System monitorowania forum MajesticRP. Otrzymuj powiadomienia o skargach bezpośrednio w wiadomościach na Discordzie.
         </p>
         <div className="button-group">
           <button 

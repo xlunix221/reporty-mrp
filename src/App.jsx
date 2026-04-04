@@ -1,5 +1,6 @@
 import './App.css';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 function App() {
   // --- TUTAJ WKLEJ SWOJE LINKI ---
@@ -133,6 +134,7 @@ function App() {
   </div>
 </footer>
       <Analytics />
+      <SpeedInsights />
     </>
   );
 }

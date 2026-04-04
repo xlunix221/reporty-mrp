@@ -1,4 +1,5 @@
 import './App.css';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   // --- TUTAJ WKLEJ SWOJE LINKI ---
@@ -131,6 +132,7 @@ function App() {
     <p className="disclaimer">Projekt nie jest powiązana z firmą MajesticRP.</p>
   </div>
 </footer>
+      <Analytics />
     </>
   );
 }
